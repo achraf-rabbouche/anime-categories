@@ -30,7 +30,7 @@ This project consists of two microservices: Anime and Categories. The Anime micr
   ## Usage
 
 
-The Anime microservice provides a GraphQL API that allows querying and manipulating anime data. Access the GraphQL playground at http://localhost:5000/graphql to interact with the API.
+The Anime microservice provides a GraphQL API that allows querying and manipulating anime data. Access the GraphQL playground at http://localhost:5002/graphql to interact with the API.
 
 The Categories microservice exposes a RESTful API for managing anime categories. Available endpoints include:
 
