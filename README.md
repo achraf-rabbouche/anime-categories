@@ -21,10 +21,10 @@ This project consists of two microservices: Anime and Categories. The Anime micr
 2. Install the dependencies for each microservice:
 
    ```bash
-   cd anime-microservice
+   cd anime-service
     npm install
 
-    cd ../categories-microservice
+    cd ../categories-service
     npm install
     
   ## Usage
