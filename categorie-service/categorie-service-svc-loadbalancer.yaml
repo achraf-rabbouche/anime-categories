@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: categorie-service-loadbalancer
+  labels:
+      app: categorie-service
+spec:
+  selector:
+    app: categorie-service
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 5000
+  type: LoadBalancer
+    

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: anime-service
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: anime-service
+  template:
+    metadata:
+      labels:
+        app: anime-service
+    spec:
+      containers:
+      - name: anime-service
+        image: achrafrabbouche/anime-service:latest
+        ports:
+        - containerPort: 5000

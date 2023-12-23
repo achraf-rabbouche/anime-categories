@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: categorie-service
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: categorie-service
+  template:
+    metadata:
+      labels:
+        app: categorie-service
+    spec:
+      containers:
+      - name: categorie-service
+        image: achrafrabbouche/categorie-service:latest
+        ports:
+        - containerPort: 5001

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: anime-service
+  labels:
+    app: anime-service
+spec:
+  containers:
+    - name: anime-service
+      image: achrafrabbouche/anime-service
+      ports:
+        - containerPort: 80
+          name: demo-http
