@@ -18,6 +18,15 @@ pipeline {
                 sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
             }
         }
+        stage('Debug Workspace') {
+    steps {
+        script {
+            pwd()
+            sh 'ls -la' 
+        }
+    }
+}
+
         stage('Build') {
             steps {
                 sh 'docker build -t $DOCKERHUB_CREDENTIALS_USR/api-gateway:$BUILD_ID -f api-gateway/Dockerfile ./api-gateway'
