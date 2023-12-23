@@ -30,8 +30,8 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'docker build -t $DOCKERHUB_CREDENTIALS_USR/api-gateway:$BUILD_ID -f api-gateway/Dockerfile ./api-gateway'
-                sh 'docker build -t $DOCKERHUB_CREDENTIALS_USR/anime-service:$BUILD_ID -f anime-service/Dockerfile .'
-                sh 'docker build -t $DOCKERHUB_CREDENTIALS_USR/categorie-service:$BUILD_ID -f categorie-service/Dockerfile .'
+                sh 'docker build -t $DOCKERHUB_CREDENTIALS_USR/anime-service:$BUILD_ID -f anime-service/Dockerfile ./anime-service'
+                sh 'docker build -t $DOCKERHUB_CREDENTIALS_USR/categorie-service:$BUILD_ID -f categorie-service/Dockerfile ./categorie-service'
             }
         }
 
